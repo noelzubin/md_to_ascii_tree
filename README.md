@@ -3,20 +3,30 @@ Convert markdown lists and nesting to ascii tree.
 
 Run 
 ``` sh
-$ echo "Root
-  Folder1
-    Subfolder1
-    Subfolder2
-  Folder2
-    Subfolder3" | cargo run 
+$ echo "
+* Physical Devices
+  * Partition Tables
+    * Partitions
+          * Physical Volumes (PV)
+          * Volume Groups (VG)
+            * Logical Volumes (LV)
+              * File Systems
+                * Virtual File System (VFS)
+    * File Systems
+      * Virtual File System (VFS)
+" | cargo run 
 
 # output
- Root
- ├─ Folder1
- │  ├─ Subfolder1
- │  └─ Subfolder2
- └─ Folder2
-    └─ Subfolder3
+Physical Devices
+└── Partition Tables
+    ├── Partitions
+    │   └── Physical Volumes (PV)
+    │       └── Volume Groups (VG)
+    │           └── Logical Volumes (LV)
+    │               └── File Systems
+    │                   └── Virtual File System (VFS)
+    └── File Systems
+        └── Virtual File System (VFS)
 ```
 
 Install

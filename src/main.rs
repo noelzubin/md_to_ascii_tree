@@ -2,6 +2,7 @@ use ascii_tree::{write_tree, Tree};
 use parse::{parse_tree, FileStructure};
 use std::io::stdin;
 
+mod ascii_tree;
 mod parse;
 
 fn get_node(node: FileStructure) -> Tree {
