@@ -1,0 +1,8 @@
+[package]
+name = "md_to_ascii_tree"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+ascii_tree = "0.1.1"
+regex = "1.10.6"
